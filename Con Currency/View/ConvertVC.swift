@@ -9,10 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-protocol ConvertAndCompareVCProtocoL: AnyObject {
-    func GoToCurrencyScreen()
-    func GoToFavoritesScreen()
-}
+
 
 class ConvertVC: UIViewController {
 

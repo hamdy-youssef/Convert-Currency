@@ -6,10 +6,7 @@
 //
 
 import UIKit
-protocol HomeVCProtocoL: AnyObject {
-    func showConvertScreen()
-    func showCompareScreen()
-}
+
 
 class HomeVC: UIViewController {
     
