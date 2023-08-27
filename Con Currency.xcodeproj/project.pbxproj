@@ -14,7 +14,6 @@
 		5255A58C2A9A2A9D00B30D8A /* Con_CurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255A58B2A9A2A9D00B30D8A /* Con_CurrencyTests.swift */; };
 		5255A5962A9A2A9D00B30D8A /* Con_CurrencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255A5952A9A2A9D00B30D8A /* Con_CurrencyUITests.swift */; };
 		5255A5982A9A2A9D00B30D8A /* Con_CurrencyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255A5972A9A2A9D00B30D8A /* Con_CurrencyUITestsLaunchTests.swift */; };
-		5255A5C12A9A2C8000B30D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5255A5BF2A9A2C8000B30D8A /* Main.storyboard */; };
 		5255A5C82A9A2D7C00B30D8A /* ConvertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255A5C72A9A2D7C00B30D8A /* ConvertVC.swift */; };
 		5255A5CA2A9A2D8E00B30D8A /* CompareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255A5C92A9A2D8E00B30D8A /* CompareVC.swift */; };
 		5255A5CC2A9A2DA100B30D8A /* FavouritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255A5CB2A9A2DA100B30D8A /* FavouritesVC.swift */; };
@@ -30,6 +29,7 @@
 		AFF1C54D0BA1F7A2A8A97601 /* Pods_Con_CurrencyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD87CFB92560AA893C01A35 /* Pods_Con_CurrencyTests.framework */; };
 		C3B8C93D94BE8E2926AA8605 /* Pods_Con_Currency_Con_CurrencyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB461FB37570A1E4D7853345 /* Pods_Con_Currency_Con_CurrencyUITests.framework */; };
 		D86061D42A9B8A0600EB9AD1 /* NetworkModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86061D32A9B8A0600EB9AD1 /* NetworkModelTests.swift */; };
+		D86061D72A9BA03300EB9AD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86061D52A9BA03300EB9AD1 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,6 @@
 		5255A5912A9A2A9D00B30D8A /* Con CurrencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Con CurrencyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5255A5952A9A2A9D00B30D8A /* Con_CurrencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Con_CurrencyUITests.swift; sourceTree = "<group>"; };
 		5255A5972A9A2A9D00B30D8A /* Con_CurrencyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Con_CurrencyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5255A5C02A9A2C8000B30D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../BM-Graduation-Project-8487004b6e6bc4f55f6a9a872641593c483dd25f/Graduation Project/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		5255A5C72A9A2D7C00B30D8A /* ConvertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertVC.swift; sourceTree = "<group>"; };
 		5255A5C92A9A2D8E00B30D8A /* CompareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareVC.swift; sourceTree = "<group>"; };
 		5255A5CB2A9A2DA100B30D8A /* FavouritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesVC.swift; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		BB461FB37570A1E4D7853345 /* Pods_Con_Currency_Con_CurrencyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Con_Currency_Con_CurrencyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362FCC79E3D5CE4FFEBE30D /* Pods_Con_Currency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Con_Currency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86061D32A9B8A0600EB9AD1 /* NetworkModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModelTests.swift; sourceTree = "<group>"; };
+		D86061D62A9BA03300EB9AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E73A8D9F491C2779AD932A36 /* Pods-Con Currency.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Con Currency.debug.xcconfig"; path = "Target Support Files/Pods-Con Currency/Pods-Con Currency.debug.xcconfig"; sourceTree = "<group>"; };
 		FFAA235B52BF39CFB1364B99 /* Pods-Con Currency-Con CurrencyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Con Currency-Con CurrencyUITests.release.xcconfig"; path = "Target Support Files/Pods-Con Currency-Con CurrencyUITests/Pods-Con Currency-Con CurrencyUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,7 +157,7 @@
 				5255A5C42A9A2D0A00B30D8A /* View */,
 				5255A5C52A9A2D1700B30D8A /* Presenters */,
 				5255A5CF2A9A982A00B30D8A /* Table View Cell */,
-				5255A5BF2A9A2C8000B30D8A /* Main.storyboard */,
+				D86061D52A9BA03300EB9AD1 /* Main.storyboard */,
 				5255A57D2A9A2A9D00B30D8A /* Assets.xcassets */,
 				5255A57F2A9A2A9D00B30D8A /* LaunchScreen.storyboard */,
 				5255A5822A9A2A9D00B30D8A /* Info.plist */,
@@ -375,7 +375,7 @@
 			files = (
 				5255A5812A9A2A9D00B30D8A /* LaunchScreen.storyboard in Resources */,
 				5255A57E2A9A2A9D00B30D8A /* Assets.xcassets in Resources */,
-				5255A5C12A9A2C8000B30D8A /* Main.storyboard in Resources */,
+				D86061D72A9BA03300EB9AD1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,10 +561,10 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		5255A5BF2A9A2C8000B30D8A /* Main.storyboard */ = {
+		D86061D52A9BA03300EB9AD1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5255A5C02A9A2C8000B30D8A /* Base */,
+				D86061D62A9BA03300EB9AD1 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

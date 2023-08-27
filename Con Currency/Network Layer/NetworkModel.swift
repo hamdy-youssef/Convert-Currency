@@ -19,7 +19,7 @@ class NetworkModel {
             let session = URLSession(configuration: URLSessionConfiguration.default)
     
             let task = session.dataTask(with: request) {data, session, error in
-                print(data!)
+//                print(data!)
     
                 guard error == nil else {
                     print(error!)
