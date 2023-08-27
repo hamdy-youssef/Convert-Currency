@@ -494,6 +494,8 @@
                         <outletCollection property="Buttons" destination="Cqu-CP-2sr" collectionClass="NSMutableArray" id="20l-Iw-PID"/>
                         <outletCollection property="Buttons" destination="Iku-nx-Gf2" collectionClass="NSMutableArray" id="z4f-0F-kju"/>
                         <outletCollection property="Buttons" destination="sbD-bu-l2m" collectionClass="NSMutableArray" id="PmV-1l-ZZz"/>
+                        <outletCollection property="Buttons" destination="WwU-oG-PWP" collectionClass="NSMutableArray" id="2Hf-H3-TiP"/>
+                        <outletCollection property="Buttons" destination="9aA-h4-Yh8" collectionClass="NSMutableArray" id="aRm-Lu-jSj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bV-Zs-3rE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1002,6 +1004,9 @@
                         <outletCollection property="Buttons" destination="5WJ-ML-rkR" collectionClass="NSMutableArray" id="z1e-1c-9hm"/>
                         <outletCollection property="Buttons" destination="OrH-KJ-18o" collectionClass="NSMutableArray" id="CmB-eK-yTm"/>
                         <outletCollection property="Buttons" destination="ew4-4m-gN5" collectionClass="NSMutableArray" id="Bvo-rk-3oV"/>
+                        <outletCollection property="Buttons" destination="cND-1a-0GI" collectionClass="NSMutableArray" id="llE-LJ-gLN"/>
+                        <outletCollection property="Buttons" destination="YXN-48-0OF" collectionClass="NSMutableArray" id="nhz-m1-ZjB"/>
+                        <outletCollection property="Buttons" destination="Qu0-20-TiB" collectionClass="NSMutableArray" id="WU8-nS-eoq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGg-73-Ms5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

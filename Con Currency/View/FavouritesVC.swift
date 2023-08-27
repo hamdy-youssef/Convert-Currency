@@ -47,6 +47,9 @@ class FavouritesVC: UIViewController {
         cellSelectionSubject
             .subscribe(onNext: { indexPath in
                 if let cell = self.favoritesTableView.cellForRow(at: indexPath) as? FavoritesTableViewCell {
+                    
+                    // Cell Selected
+                    
                     cell.isSelected = true
                     cell.checkBtn.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
                     print("Selected cell at indexPath: \(indexPath)")

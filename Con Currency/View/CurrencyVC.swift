@@ -9,6 +9,9 @@ import UIKit
 import RxCocoa
 import RxSwift
 
+protocol CurrencyVCProtocoL: AnyObject {
+   
+}
 
 class CurrencyVC: UIViewController {
 
@@ -19,11 +22,11 @@ class CurrencyVC: UIViewController {
     let cellSelectionSubject = PublishSubject<IndexPath>()
     let arrayOfCurrency  = Observable.just(Currency.setCurrenyData())
     let convert: ConvertVC = ConvertVC()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         preferredContentSize.height = 100
         container.sizeToFit()
-      
         setTableData()
     }
     func setTableData() {
@@ -34,7 +37,6 @@ class CurrencyVC: UIViewController {
                     (row, currencyTableView, cell) in
                     cell.currencyImage.image = UIImage.init(named: currencyTableView.flag)
                     cell.currencylabel.text = currencyTableView.currency
-//                    cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: cell.bounds.size.width)
                 }
                 .disposed(by: disposeBag)
         
@@ -47,12 +49,11 @@ class CurrencyVC: UIViewController {
         cellSelectionSubject
             .subscribe(onNext: { [self] indexPath in
                 if let cell = self.currencyTableView.cellForRow(at: indexPath) as? CurrencyTVCell {
+                    
+                    // Cell Selected
+                    
                     cell.isSelected = true
                     cell.backView.backgroundColor = UIColor(red: 210, green: 213, blue: 224, alpha: 100)
-                    
-                    guard let currencyName = cell.currencylabel.text, let currencyImage = cell.currencyImage
-                    else {return}
-                    convert.btn(text: cell.currencylabel.text!)
                     self.dismiss(animated: true, completion: nil)
                     print("Selected cell at indexPath: \(indexPath)")
                 }
@@ -62,4 +63,8 @@ class CurrencyVC: UIViewController {
     
     }
 
+}
+
+extension CurrencyVC {
+    
 }
