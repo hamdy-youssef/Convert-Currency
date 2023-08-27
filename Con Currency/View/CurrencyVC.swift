@@ -56,6 +56,11 @@ class CurrencyVC: UIViewController {
                     cell.isSelected = true
                     cell.backView.backgroundColor = UIColor(red: 210, green: 213, blue: 224, alpha: 100)
                     self.dismiss(animated: true, completion: nil)
+                    guard let name = cell.currencylabel.text else {
+                        return
+                    }
+                    convert.convertFromBTn.setTitle(name, for: .normal)
+                    print(name)
                     print("Selected cell at indexPath: \(indexPath)")
                 }
             })
