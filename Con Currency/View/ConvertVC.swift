@@ -12,6 +12,7 @@ import RxSwift
 class ConvertVC: UIViewController {
 
     @IBOutlet weak var favotiteBtn: UIButton!
+    
     @IBOutlet var Buttons: [UIButton]!
     
     @IBOutlet weak var favoritesTableView: UITableView!
@@ -20,15 +21,29 @@ class ConvertVC: UIViewController {
     
     @IBOutlet weak var targetAmountLabel: UILabel!
     
+    @IBOutlet var convertFromBTn: UIButton!
+    
+    @IBOutlet var convertToBtn: UIButton!
+    
+    @IBOutlet var convertFromImage: UIImageView!
+    
+    @IBOutlet var convertToImage: UIImageView!
+    
+    var tag: Int?
     let disposeBag = DisposeBag()
-  
+   
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setBorderAndRadiusForUiComponents()
     }
-    
+    func btn(text: String) {
+        print(text ?? "wrong")
+        convertFromBTn = UIButton(type: .system)
+        convertFromBTn.setTitle(text, for: .normal)
+    }
     
     
     func setBorderAndRadiusForUiComponents() {
@@ -50,18 +65,21 @@ class ConvertVC: UIViewController {
     }
     
     @IBAction func addToFavoriteBtn(_ sender: Any) {
+        
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "FavouritesVC") as! FavouritesVC
         self.present(vc, animated: true)
     }
     
     @IBAction func convertFromBtn(_ sender: Any) {
+        tag = 0
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "CurrencyVC") as! CurrencyVC
         self.present(vc, animated: true)
     }
     
     @IBAction func convertToBtn(_ sender: Any) {
+        tag = 1
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "CurrencyVC") as! CurrencyVC
         self.present(vc, animated: true)

@@ -18,7 +18,7 @@ class CurrencyVC: UIViewController {
     let disposeBag = DisposeBag()
     let cellSelectionSubject = PublishSubject<IndexPath>()
     let arrayOfCurrency  = Observable.just(Currency.setCurrenyData())
-    
+    let convert: ConvertVC = ConvertVC()
     override func viewDidLoad() {
         super.viewDidLoad()
         preferredContentSize.height = 100
@@ -45,16 +45,15 @@ class CurrencyVC: UIViewController {
             .disposed(by: disposeBag)
         
         cellSelectionSubject
-            .subscribe(onNext: { indexPath in
+            .subscribe(onNext: { [self] indexPath in
                 if let cell = self.currencyTableView.cellForRow(at: indexPath) as? CurrencyTVCell {
                     cell.isSelected = true
                     cell.backView.backgroundColor = UIColor(red: 210, green: 213, blue: 224, alpha: 100)
                     
                     guard let currencyName = cell.currencylabel.text, let currencyImage = cell.currencyImage
                     else {return}
-                    let currency = Currency(currency: currencyName, exchangeRate: nil, flag: currencyImage.text )
-                    UserDefaultsManager.shared () .saveUserData(currency: currency)
-                    
+                    convert.btn(text: cell.currencylabel.text!)
+                    self.dismiss(animated: true, completion: nil)
                     print("Selected cell at indexPath: \(indexPath)")
                 }
             })

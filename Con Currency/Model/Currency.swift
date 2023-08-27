@@ -19,7 +19,7 @@ struct Instruction: Codable {
 }
 
 struct Currency: Codable {
-    let currency: String
+    var currency: String
     let exchangeRate: String?
     let flag: String
     
