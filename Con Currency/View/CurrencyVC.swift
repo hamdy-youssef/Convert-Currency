@@ -37,6 +37,7 @@ class CurrencyVC: UIViewController {
                     (row, currencyTableView, cell) in
                     cell.currencyImage.image = UIImage.init(named: currencyTableView.flag)
                     cell.currencylabel.text = currencyTableView.currency
+                    cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: cell.bounds.size.width)
                 }
                 .disposed(by: disposeBag)
         
