@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< Updated upstream
+		522FC2B62A9BB4FF00302A67 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2B52A9BB4FE00302A67 /* HomePresenter.swift */; };
+		522FC2B92A9BB6DC00302A67 /* HomeScreenExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2B82A9BB6DC00302A67 /* HomeScreenExtention.swift */; };
+=======
+		522FC2B42A9BA56100302A67 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2B32A9BA56100302A67 /* HomePresenter.swift */; };
+>>>>>>> Stashed changes
 		5255A5752A9A2A9B00B30D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255A5742A9A2A9B00B30D8A /* AppDelegate.swift */; };
 		5255A5792A9A2A9B00B30D8A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255A5782A9A2A9B00B30D8A /* HomeVC.swift */; };
 		5255A57E2A9A2A9D00B30D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5255A57D2A9A2A9D00B30D8A /* Assets.xcassets */; };
@@ -52,6 +58,12 @@
 /* Begin PBXFileReference section */
 		16D15AE0A60F9DF38A89A29E /* Pods-Con Currency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Con Currency.release.xcconfig"; path = "Target Support Files/Pods-Con Currency/Pods-Con Currency.release.xcconfig"; sourceTree = "<group>"; };
 		4481FB8385CB586F98871227 /* Pods-Con CurrencyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Con CurrencyTests.release.xcconfig"; path = "Target Support Files/Pods-Con CurrencyTests/Pods-Con CurrencyTests.release.xcconfig"; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
+		522FC2B52A9BB4FE00302A67 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomePresenter.swift; path = "Con Currency/Presenters/HomePresenter.swift"; sourceTree = SOURCE_ROOT; };
+		522FC2B82A9BB6DC00302A67 /* HomeScreenExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenExtention.swift; sourceTree = "<group>"; };
+=======
+		522FC2B32A9BA56100302A67 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		5255A5712A9A2A9B00B30D8A /* Con Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Con Currency.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5255A5742A9A2A9B00B30D8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5255A5782A9A2A9B00B30D8A /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -123,6 +135,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		522FC2B72A9BB52300302A67 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				522FC2B52A9BB4FE00302A67 /* HomePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 		5255A5682A9A2A9B00B30D8A = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +175,7 @@
 				5255A5B92A9A2BDD00B30D8A /* Network Layer */,
 				5255A5B42A9A2BAC00B30D8A /* Model */,
 				5255A5C42A9A2D0A00B30D8A /* View */,
-				5255A5C52A9A2D1700B30D8A /* Presenters */,
+				522FC2B72A9BB52300302A67 /* Presenters */,
 				5255A5CF2A9A982A00B30D8A /* Table View Cell */,
 				D86061D52A9BA03300EB9AD1 /* Main.storyboard */,
 				5255A57D2A9A2A9D00B30D8A /* Assets.xcassets */,
@@ -220,16 +240,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
+=======
 		5255A5C52A9A2D1700B30D8A /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				522FC2B32A9BA56100302A67 /* HomePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
 		};
+>>>>>>> Stashed changes
 		5255A5C62A9A2D2500B30D8A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				522FC2B82A9BB6DC00302A67 /* HomeScreenExtention.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -510,11 +535,17 @@
 				5255A5CA2A9A2D8E00B30D8A /* CompareVC.swift in Sources */,
 				527ACE0F2A9B3A6600FC6D84 /* Currency.swift in Sources */,
 				5255A5792A9A2A9B00B30D8A /* HomeVC.swift in Sources */,
+<<<<<<< Updated upstream
+				522FC2B62A9BB4FF00302A67 /* HomePresenter.swift in Sources */,
+=======
+				522FC2B42A9BA56100302A67 /* HomePresenter.swift in Sources */,
+>>>>>>> Stashed changes
 				527ACE0E2A9B3A6600FC6D84 /* Data.swift in Sources */,
 				52575E902A9B25E60083FB1A /* UserDefaultManager.swift in Sources */,
 				5255A5752A9A2A9B00B30D8A /* AppDelegate.swift in Sources */,
 				52C0BBF02A9B55A200619611 /* Constants.swift in Sources */,
 				527ACE0B2A9B3A3400FC6D84 /* NetworkModel.swift in Sources */,
+				522FC2B92A9BB6DC00302A67 /* HomeScreenExtention.swift in Sources */,
 				5255A5CC2A9A2DA100B30D8A /* FavouritesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

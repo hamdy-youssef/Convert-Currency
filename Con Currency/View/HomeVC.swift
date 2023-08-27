@@ -7,6 +7,16 @@
 
 import UIKit
 
+protocol HomeVCProtocoL: AnyObject {
+<<<<<<< Updated upstream
+    func showConvertScreen()
+    func showCompareScreen()
+=======
+   func showConvertView()
+    func showCompareView()
+>>>>>>> Stashed changes
+}
+
 class HomeVC: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -15,30 +25,48 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var compareSegmentView: UIView!
     
+<<<<<<< Updated upstream
+    lazy var presenter: HomePresenter = HomePresenter (view: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        showView(index: 0)
+        showConvertScreen()
         
     }
     
-    func showView(index: Int) {
-        convertSegmentView.isHidden = true
-        compareSegmentView.isHidden = true
-        switch index {
-        case 0:
-            convertSegmentView.isHidden = false
-        case 1:
-            compareSegmentView.isHidden = false
-        default:
-            break
-        }
+=======
+    lazy var presenter: HomePresenter = HomePresenter(view: self)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        showConvertView()
     }
     
+    
+>>>>>>> Stashed changes
     @IBAction func segmentedAction(_ sender: UISegmentedControl) {
         let selectedSegmentIndex = sender.selectedSegmentIndex
-        showView(index: selectedSegmentIndex)
+        self.presenter.showView(index: selectedSegmentIndex)
     }
     
     
     
 }
+
+<<<<<<< Updated upstream
+=======
+extension HomeVC: HomeVCProtocoL {
+    func showConvertView() {
+        convertSegmentView.isHidden = false
+        compareSegmentView.isHidden = true
+    }
+    
+    func showCompareView() {
+        compareSegmentView.isHidden = false
+        convertSegmentView.isHidden = true
+    }
+    
+    
+}
+>>>>>>> Stashed changes
+
