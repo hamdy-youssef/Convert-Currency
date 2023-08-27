@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
+//        NetworkModel.getDataForConvert(tail: "/pair/EGP/USD/QAR/1", completion: <#T##(Error?, String?) -> Void##(Error?, String?) -> Void##(_ error: Error?, _ currencyData: String?) -> Void#>)
         // Override point for customization after application launch.
         return true
     }

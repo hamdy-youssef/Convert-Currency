@@ -54,6 +54,23 @@ class CompareVC: UIViewController {
         
     }
     
+    @IBAction func convertFromBtn(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "CurrencyVC") as! CurrencyVC
+        self.present(vc, animated: true)
+    }
+    
+    @IBAction func convertToTargetOne(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "CurrencyVC") as! CurrencyVC
+        self.present(vc, animated: true)
+    }
+    
+    @IBAction func convertToTargetTwo(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "CurrencyVC") as! CurrencyVC
+        self.present(vc, animated: true)
+    }
     
     
 }

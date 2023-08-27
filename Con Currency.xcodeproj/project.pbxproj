@@ -25,7 +25,7 @@
 		527ACE0B2A9B3A3400FC6D84 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ACE0A2A9B3A3400FC6D84 /* NetworkModel.swift */; };
 		527ACE0E2A9B3A6600FC6D84 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ACE0C2A9B3A6600FC6D84 /* Data.swift */; };
 		527ACE0F2A9B3A6600FC6D84 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ACE0D2A9B3A6600FC6D84 /* Currency.swift */; };
-		527ACE112A9B3AB200FC6D84 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ACE102A9B3AB200FC6D84 /* Constants.swift */; };
+		52C0BBF02A9B55A200619611 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C0BBEF2A9B55A200619611 /* Constants.swift */; };
 		5751A7B9C5BC043044A31935 /* Pods_Con_Currency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C362FCC79E3D5CE4FFEBE30D /* Pods_Con_Currency.framework */; };
 		AFF1C54D0BA1F7A2A8A97601 /* Pods_Con_CurrencyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD87CFB92560AA893C01A35 /* Pods_Con_CurrencyTests.framework */; };
 		C3B8C93D94BE8E2926AA8605 /* Pods_Con_Currency_Con_CurrencyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB461FB37570A1E4D7853345 /* Pods_Con_Currency_Con_CurrencyUITests.framework */; };
@@ -73,7 +73,7 @@
 		527ACE0A2A9B3A3400FC6D84 /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		527ACE0C2A9B3A6600FC6D84 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		527ACE0D2A9B3A6600FC6D84 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		527ACE102A9B3AB200FC6D84 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "../../../../Documents/Swift_projects/Con Currency/Con Currency/Utilities/Constants.swift"; sourceTree = "<group>"; };
+		52C0BBEF2A9B55A200619611 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6FD87CFB92560AA893C01A35 /* Pods_Con_CurrencyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Con_CurrencyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BE4AF5B68E805C7EEE2DF3 /* Pods-Con Currency-Con CurrencyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Con Currency-Con CurrencyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Con Currency-Con CurrencyUITests/Pods-Con Currency-Con CurrencyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2D35A807CFFC4A2271DC6C0 /* Pods-Con CurrencyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Con CurrencyTests.debug.xcconfig"; path = "Target Support Files/Pods-Con CurrencyTests/Pods-Con CurrencyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 		5255A5BC2A9A2BF600B30D8A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				527ACE102A9B3AB200FC6D84 /* Constants.swift */,
+				52C0BBEF2A9B55A200619611 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -510,7 +510,7 @@
 				527ACE0E2A9B3A6600FC6D84 /* Data.swift in Sources */,
 				52575E902A9B25E60083FB1A /* UserDefaultManager.swift in Sources */,
 				5255A5752A9A2A9B00B30D8A /* AppDelegate.swift in Sources */,
-				527ACE112A9B3AB200FC6D84 /* Constants.swift in Sources */,
+				52C0BBF02A9B55A200619611 /* Constants.swift in Sources */,
 				527ACE0B2A9B3A3400FC6D84 /* NetworkModel.swift in Sources */,
 				5255A5CC2A9A2DA100B30D8A /* FavouritesVC.swift in Sources */,
 			);

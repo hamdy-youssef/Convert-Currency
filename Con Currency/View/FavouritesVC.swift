@@ -13,23 +13,14 @@ class FavouritesVC: UIViewController {
 
     
     @IBOutlet var favoritesTableView: UITableView!
+    
     let disposeBag = DisposeBag()
     let cellSelectionSubject = PublishSubject<IndexPath>()
-    let arrayOfCurrency  = Observable.just([Currency(currency: "EGP", exchangeRate: nil , flag: "EGP"),
-                                            Currency(currency: "USD", exchangeRate: nil, flag: "USD"),
-                                            Currency(currency: "EUR", exchangeRate: nil, flag: "EUR"),
-                                            Currency(currency: "GBP", exchangeRate: nil, flag: "GBP"),
-                                            Currency(currency: "JPY", exchangeRate: nil, flag: "JPY"),
-                                            Currency(currency: "SAR", exchangeRate: nil, flag: "SAR"),
-                                            Currency(currency: "AED", exchangeRate: nil, flag: "AED"),
-                                            Currency(currency: "KWD", exchangeRate: nil, flag: "KWD"),
-                                            Currency(currency: "BHD", exchangeRate: nil, flag: "BHD"),
-                                            Currency(currency: "OMR", exchangeRate: nil, flag: "OMR"),
-                                            Currency(currency: "QAR", exchangeRate: nil, flag: "QAR")])
+    let arrayOfCurrency  = Observable.just(Currency.setCurrenyData())
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         setTableData()
     }
@@ -47,8 +38,25 @@ class FavouritesVC: UIViewController {
                 }
                 .disposed(by: disposeBag)
         
+        favoritesTableView
+            .rx
+            .itemSelected
+            .bind(to: cellSelectionSubject)
+            .disposed(by: disposeBag)
         
+        cellSelectionSubject
+            .subscribe(onNext: { indexPath in
+                if let cell = self.favoritesTableView.cellForRow(at: indexPath) as? FavoritesTableViewCell {
+                    cell.isSelected = true
+                    cell.checkBtn.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
+                    print("Selected cell at indexPath: \(indexPath)")
+                }
+            })
+            .disposed(by: disposeBag)
     }
 
-
+    @IBAction func closeFavoritesListBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
