@@ -52,8 +52,8 @@ class CurrencyVC: UIViewController {
                     
                     guard let currencyName = cell.currencylabel.text, let currencyImage = cell.currencyImage
                     else {return}
-//                    let currency = Currency(currency: currencyName, exchangeRate: nil, flag: )
-//                    UserDefaultsManager.shared () .saveUserData(currency: currency)
+                    let currency = Currency(currency: currencyName, exchangeRate: nil, flag: currencyImage.text )
+                    UserDefaultsManager.shared () .saveUserData(currency: currency)
                     
                     print("Selected cell at indexPath: \(indexPath)")
                 }
