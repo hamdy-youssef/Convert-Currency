@@ -16,7 +16,6 @@ class CompareVC: UIViewController {
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var targetOneLabel: UILabel!
     @IBOutlet weak var targetTwoLabel: UILabel!
-    
     @IBOutlet var targetOneImage: UIImageView!
     @IBOutlet var targetTwoImage: UIImageView!
     @IBOutlet var fromImage: UIImageView!
@@ -29,27 +28,6 @@ class CompareVC: UIViewController {
         super.viewDidLoad()
         setBorderAndRadiusForUiComponents()
         NotificationCenter.default.addObserver(self, selector: #selector(handleDataUpdate(_:)), name: Notification.Name("DataUpdated"), object: nil)
-
-    }
-    
-    @objc func handleDataUpdate(_ notification: Notification) {
-        if let userInfo = notification.userInfo,
-           let data = userInfo["data"] as? String,
-           let image = userInfo["image"] as? UIImage {
-            switch tag {
-            case 1:
-                fromBtn.setTitle(data, for: .normal)
-                fromImage.image = image
-            case 2:
-                targetOneBtn.setTitle(data, for: .normal)
-                targetOneImage.image = image
-            case 3:
-                targetTwoBtn.setTitle(data, for: .normal)
-                targetTwoImage.image = image
-            default:
-                return
-            }
-        }
     }
     
     @IBAction func compareButtons(_ sender: UIButton) {
@@ -61,5 +39,4 @@ class CompareVC: UIViewController {
         presenter.amount = amountTextField.text
         presenter.checkAPI()
     }
-    
 }

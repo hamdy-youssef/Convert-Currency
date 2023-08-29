@@ -16,6 +16,7 @@ class ConvertPresenter {
     init (view: ConvertVCProtocoL) {
         self.view = view
     }
+    
     func goToAnyScreen(viewController: String) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         switch viewController {
@@ -27,12 +28,12 @@ class ConvertPresenter {
             break
         }
     }
-        
+    
     func checkAPI() {
         if amount != "" {
             self.view?.fetchApiForConvert()
         }else {
-            self.view?.showAlert(title: "Wrong", messege: "Please Enter Amount")
+            self.view?.showAlert(title: "Wrong", message: "Please Enter Amount")
         }
     }
 }

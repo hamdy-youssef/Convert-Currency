@@ -30,6 +30,4 @@ class FavouritesVC: UIViewController {
     @IBAction func closeFavoritesListBtn(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-
 }

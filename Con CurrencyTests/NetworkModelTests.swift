@@ -1,48 +1,53 @@
-//
-//  NetworkModel.swift
-//  Con CurrencyTests
-//
-//  Created by Youssef Salah on 27/08/2023.
-//
-
 import XCTest
+
 @testable import Con_Currency
-final class NetworkModelTests: XCTestCase {
-    
-    var tail = "EGP"
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+class NetworkModelTests: XCTestCase {
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-    func testData(){
-        NetworkModel.getDataForConvert(tail: tail) { error, currencyData in
-            if let error = error {
-                print(error.localizedDescription)
-                XCTAssertFalse(false)
-            } else if let currencyData = currencyData {
-                XCTAssertTrue(true)
-            }
-        }
-    }
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testGetDataForConvert() {
+        let expectation = self.expectation(description: "Conversion data retrieved")
+        let tail = "/pair/USD/EGP/1"
         
-    
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        NetworkModel.getDataForConvert(tail: tail) { error, currencyData in
+            XCTAssertNil(error, "Error should be nil")
+            XCTAssertNotNil(currencyData, "Currency data should not be nil")
+            expectation.fulfill()
         }
+        
+        waitForExpectations(timeout: 10, handler: nil)
     }
-
+    
+    func testGetDataForCompare() {
+        let expectation = self.expectation(description: "Comparison data retrieved")
+        let tail = "/compare/USD/EGP/QAR/1"
+        NetworkModel.getDataForCompare(tail: tail) { error, valueOne, valueTwo in
+        XCTAssertNil(error, "Error should be nil")
+        XCTAssertNotNil(valueOne, "Value One should not be nil")
+        XCTAssertNotNil(valueTwo, "Value Two should not be nil")
+        expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 10, handler: nil)
+    }
+    
+    func testGetFavouriteCurrency() {
+          let expectation = self.expectation(description: "Favourite currency data retrieved")
+          let tail = "/rates"
+          let base = "USD"
+          let currenciesName = ["EUR", "JPY"]
+          
+          NetworkModel.getFavouriteCurrency(tail: tail, base: base, currenciesName: currenciesName) { error, json in
+              XCTAssertNil(error, "Error should be nil")
+              XCTAssertNotNil(json, "JSON data should not be nil")
+              
+              if let json = json {
+                  XCTAssertFalse(json.isEmpty, "JSON data should not be empty")
+                  // You can add more assertions based on the structure of your JSON response
+              }
+              
+              expectation.fulfill()
+          }
+          
+          waitForExpectations(timeout: 10, handler: nil)
+      }
 }

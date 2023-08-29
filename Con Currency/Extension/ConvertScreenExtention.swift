@@ -14,7 +14,7 @@ extension ConvertVC: ConvertVCProtocoL , UITextFieldDelegate{
         let tail = "/pair/\(convertFromBTn.currentTitle!)/\(convertToBtn.currentTitle!)/\(baseAmountTextField.text!)"
         NetworkModel.getDataForConvert(tail: tail) { error, currencyData in
             if let error = error {
-                self.showAlert(title: "Wrong", messege: ErrorMessages.somethingWentWrong)
+                self.showAlert(title: "Wrong", message: ErrorMessages.somethingWentWrong)
             }else if let currencyData = currencyData {
                 let data = String(currencyData.prefix(6))
                 DispatchQueue.main.async {
@@ -49,15 +49,30 @@ extension ConvertVC: ConvertVCProtocoL , UITextFieldDelegate{
                            }
                            .disposed(by: self.disposeBag)
                 }
-                 
             }
         }
-
     }
     
     func GoToCurrencyScreen(){
          vc = sb.instantiateViewController(withIdentifier: "CurrencyVC") as! CurrencyVC
         self.present(vc, animated: true)
+    }
+    
+    @objc func handleDataUpdate(_ notification: Notification) {
+        if let userInfo = notification.userInfo,
+           let data = userInfo["data"] as? String,
+           let image = userInfo["image"] as? UIImage {
+            switch tag {
+            case 1:
+                convertFromBTn.setTitle(data, for: .normal)
+                convertFromImage.image = image
+            case 2:
+                convertToBtn.setTitle(data, for: .normal)
+                convertToImage.image = image
+            default:
+                return
+            }
+        }
     }
     
     func GoToFavoritesScreen(){
@@ -66,10 +81,8 @@ extension ConvertVC: ConvertVCProtocoL , UITextFieldDelegate{
     }
     
     func setBorderAndRadiusForUiComponents() {
-        
         convertFromBTn.setTitle("USD", for: .normal)
         convertToBtn.setTitle("EGP", for: .normal)
-        
         for button in Buttons {
             button.layer.borderWidth = 0.2
             button.layer.borderColor = UIColor.gray.cgColor
@@ -79,11 +92,11 @@ extension ConvertVC: ConvertVCProtocoL , UITextFieldDelegate{
         favotiteBtn.layer.borderWidth = 0.7
     }
     
-    func showAlert(title: String, messege: String) {
-        let alert = UIAlertController(title: title, message: messege, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        self.present(alert, animated: true)
-    }
+//    func showAlert(title: String, messege: String) {
+//        let alert = UIAlertController(title: title, message: messege, preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "OK", style: .default))
+//        self.present(alert, animated: true)
+//    }
     
      func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if baseAmountTextField.text != "" {

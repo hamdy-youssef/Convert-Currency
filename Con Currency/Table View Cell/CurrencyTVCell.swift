@@ -22,12 +22,12 @@ class CurrencyTVCell: UITableViewCell {
         
         backView.layer.borderWidth = 0.2
         backView.layer.borderColor = UIColor.gray.cgColor
-        backView.layer.cornerRadius = 10 // You can adjust this value as needed
+        backView.layer.cornerRadius = 10 
         backView.layer.masksToBounds = true
         
         leftSideView.layer.borderWidth = 0.2
         leftSideView.layer.borderColor = UIColor.gray.cgColor
-        leftSideView.layer.cornerRadius = 3 // You can adjust this value as needed
+        leftSideView.layer.cornerRadius = 3
         leftSideView.layer.masksToBounds = true
         
         backView.layer.masksToBounds = false
@@ -39,9 +39,7 @@ class CurrencyTVCell: UITableViewCell {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-       
-        // Configure the view for the selected state
+
     }
 
 }

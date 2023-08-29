@@ -25,8 +25,6 @@ extension FavouritesVC: FavoritesVCProtocoL {
         UserDefaultsManager.shared().saveCurrencyData(currency:  self.favCurrencyArray)
     }
     
-
-    
     func setTableData() {
         arrayOfCurrency
             .bind(to: favoritesTableView
@@ -58,5 +56,4 @@ extension FavouritesVC: FavoritesVCProtocoL {
             })
             .disposed(by: disposeBag)
     }
-
 }

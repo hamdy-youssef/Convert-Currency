@@ -24,6 +24,3 @@ struct AlertConstants {
     static let actionTitle = "Ok"
 }
 
-//struct ErrorMessages {
-//static let somethingWentWrong = "Something went wrong, please try again later!"
-//}

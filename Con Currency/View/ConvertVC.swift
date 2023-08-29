@@ -40,28 +40,9 @@ class ConvertVC: UIViewController {
         setBorderAndRadiusForUiComponents()
         baseAmountTextField.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(handleDataUpdate(_:)), name: Notification.Name("DataUpdated"), object: nil)
-        
     }
     
-    @objc func handleDataUpdate(_ notification: Notification) {
-        if let userInfo = notification.userInfo,
-           let data = userInfo["data"] as? String,
-           let image = userInfo["image"] as? UIImage {
-            switch tag {
-            case 1:
-                convertFromBTn.setTitle(data, for: .normal)
-                convertFromImage.image = image
-            case 2:
-                convertToBtn.setTitle(data, for: .normal)
-                convertToImage.image = image
-            default:
-                return
-            }
-        }
-    }
-        
     @IBAction func convertButtons(_ sender: UIButton) {
-        print(sender.tag)
         tag = sender.tag
         presenter.goToAnyScreen(viewController: "currency")
     }
@@ -75,11 +56,11 @@ class ConvertVC: UIViewController {
     @IBAction func addToFavoriteBtn(_ sender: Any) {
         presenter.goToAnyScreen(viewController: "favorite")
     }
+    
     @IBAction func convertButton(_ sender: Any) {
         presenter.amount = baseAmountTextField.text
         presenter.checkAPI()
     }
-    
-    
+ 
 }
 

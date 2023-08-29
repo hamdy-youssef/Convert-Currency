@@ -18,7 +18,7 @@ class ComparePresenter {
         if amount != "" {
             self.view?.fetchApiForCompare()
         }else {
-            self.view?.showAlert(title: "Wrong", messege: "Please Enter Amount")
+            self.view?.showAlert(title: "Wrong", message: "Please Enter Amount")
         }
     }
 }

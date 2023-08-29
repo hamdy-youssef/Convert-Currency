@@ -15,6 +15,5 @@ class ValidationManager {
     }
     
     private init() {}
-    
-    
+
 }

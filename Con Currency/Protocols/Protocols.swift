@@ -13,17 +13,17 @@ protocol HomeVCProtocoL: AnyObject {
     func showCompareScreen()
 }
 
-protocol ConvertVCProtocoL: AnyObject {
+protocol ConvertVCProtocoL: AnyObject, UIViewController{
     func GoToCurrencyScreen()
     func GoToFavoritesScreen()
     func fetchApiForConvert()
-    func showAlert(title: String, messege: String)
+//    func showAlert(title: String, messege: String)
 }
 
-protocol CompareVCProtocoL: AnyObject {
+protocol CompareVCProtocoL: AnyObject, UIViewController {
     func GoToCurrencyScreen()
     func fetchApiForCompare()
-    func showAlert(title: String, messege: String)
+//    func showAlert(title: String, messege: String)
 }
 
 protocol FavoritesVCProtocoL: AnyObject {

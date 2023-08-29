@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension HomeVC: HomeVCProtocoL {
+    
     func showConvertScreen() {
         compareSegmentView.isHidden = true
         titleLabel.text = "Currency Converter"
@@ -17,7 +18,6 @@ extension HomeVC: HomeVCProtocoL {
                     self.convertSegmentView.center.x = self.view.center.x
             self.convertSegmentView.isHidden = false
         }
-        
     }
     
     func test (){}
@@ -31,5 +31,4 @@ extension HomeVC: HomeVCProtocoL {
                    self.compareSegmentView.isHidden = false
                }
     }
-    
 }
