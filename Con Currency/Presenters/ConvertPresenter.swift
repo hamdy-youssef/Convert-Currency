@@ -4,7 +4,6 @@
 //
 //  Created by Hamdy Youssef on 27/08/2023.
 //
-
 import Foundation
 import UIKit
 
@@ -29,11 +28,23 @@ class ConvertPresenter {
         }
     }
     
+    func IsNumberWrittenInArabicOrEnglish(_ input: String) -> Bool {
+        let arabicNumbers = CharacterSet(charactersIn: "٠١٢٣٤٥٦٧٨٩")
+        let containsArabicNumbers = input.rangeOfCharacter(from: arabicNumbers) != nil
+        if containsArabicNumbers {
+            self.view?.showAlert(title: "Wrong", message: "Please Enter Number In English")
+        }
+        
+        return containsArabicNumbers
+        
+    }
+    
     func checkAPI() {
-        if amount != "" {
+        if amount != "" && !IsNumberWrittenInArabicOrEnglish(amount!) {
             self.view?.fetchApiForConvert()
         }else {
             self.view?.showAlert(title: "Wrong", message: "Please Enter Amount")
         }
     }
 }
+
