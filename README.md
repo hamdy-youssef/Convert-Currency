@@ -46,7 +46,7 @@ To get started with the Currency Converter App, follow these steps:
 2. **Clone the Repository**: Clone this repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/hamdy-youssef/currency-converter-app.git
+   git clone https://github.com/hamdy-youssef/Convert-Currency.git
    ```
 
 3. **Open Project**: Open the project in Xcode by navigating to the project folder and double-clicking the `.xcodeproj` file.
