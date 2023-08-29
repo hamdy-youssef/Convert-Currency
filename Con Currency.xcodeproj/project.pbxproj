@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		522FC2BB2A9BBA4000302A67 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2BA2A9BBA4000302A67 /* HomePresenter.swift */; };
-		522FC2BD2A9BBA4C00302A67 /* HomeScreenExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2BC2A9BBA4C00302A67 /* HomeScreenExtention.swift */; };
 		522FC2BF2A9BC1B000302A67 /* ConvertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2BE2A9BC1B000302A67 /* ConvertPresenter.swift */; };
 		522FC2C12A9BCA7300302A67 /* ConvertScreenExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2C02A9BCA7300302A67 /* ConvertScreenExtention.swift */; };
 		522FC2C32A9BCCDD00302A67 /* CompareScreenExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2C22A9BCCDD00302A67 /* CompareScreenExtention.swift */; };
@@ -32,6 +30,8 @@
 		525833C52A9DDE0800B0CCCD /* ComparePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525833C42A9DDE0800B0CCCD /* ComparePresenter.swift */; };
 		525833C72A9DE1FD00B0CCCD /* FavoritesExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525833C62A9DE1FD00B0CCCD /* FavoritesExtention.swift */; };
 		525833C92A9DE40300B0CCCD /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525833C82A9DE40300B0CCCD /* FavoritesPresenter.swift */; };
+		525833CD2A9DFC9500B0CCCD /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525833CC2A9DFC9500B0CCCD /* HomePresenter.swift */; };
+		525833CF2A9DFCE000B0CCCD /* HomeScreenExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525833CE2A9DFCE000B0CCCD /* HomeScreenExtention.swift */; };
 		527ACE0B2A9B3A3400FC6D84 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ACE0A2A9B3A3400FC6D84 /* NetworkModel.swift */; };
 		527ACE0E2A9B3A6600FC6D84 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ACE0C2A9B3A6600FC6D84 /* Data.swift */; };
 		527ACE0F2A9B3A6600FC6D84 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ACE0D2A9B3A6600FC6D84 /* Currency.swift */; };
@@ -63,8 +63,6 @@
 /* Begin PBXFileReference section */
 		16D15AE0A60F9DF38A89A29E /* Pods-Con Currency.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Con Currency.release.xcconfig"; path = "Target Support Files/Pods-Con Currency/Pods-Con Currency.release.xcconfig"; sourceTree = "<group>"; };
 		4481FB8385CB586F98871227 /* Pods-Con CurrencyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Con CurrencyTests.release.xcconfig"; path = "Target Support Files/Pods-Con CurrencyTests/Pods-Con CurrencyTests.release.xcconfig"; sourceTree = "<group>"; };
-		522FC2BA2A9BBA4000302A67 /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePresenter.swift; path = "../../../../../Programing/Swift_projects/Convert-Currency/Con Currency/Presenters/HomePresenter.swift"; sourceTree = "<group>"; };
-		522FC2BC2A9BBA4C00302A67 /* HomeScreenExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeScreenExtention.swift; path = "../../../../../Programing/Swift_projects/Convert-Currency/Con Currency/Extension/HomeScreenExtention.swift"; sourceTree = "<group>"; };
 		522FC2BE2A9BC1B000302A67 /* ConvertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertPresenter.swift; sourceTree = "<group>"; };
 		522FC2C02A9BCA7300302A67 /* ConvertScreenExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertScreenExtention.swift; sourceTree = "<group>"; };
 		522FC2C22A9BCCDD00302A67 /* CompareScreenExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareScreenExtention.swift; sourceTree = "<group>"; };
@@ -92,6 +90,8 @@
 		525833C42A9DDE0800B0CCCD /* ComparePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparePresenter.swift; sourceTree = "<group>"; };
 		525833C62A9DE1FD00B0CCCD /* FavoritesExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesExtention.swift; sourceTree = "<group>"; };
 		525833C82A9DE40300B0CCCD /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		525833CC2A9DFC9500B0CCCD /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		525833CE2A9DFCE000B0CCCD /* HomeScreenExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenExtention.swift; sourceTree = "<group>"; };
 		527ACE0A2A9B3A3400FC6D84 /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		527ACE0C2A9B3A6600FC6D84 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		527ACE0D2A9B3A6600FC6D84 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
@@ -254,7 +254,7 @@
 		5255A5C52A9A2D1700B30D8A /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				522FC2BA2A9BBA4000302A67 /* HomePresenter.swift */,
+				525833CC2A9DFC9500B0CCCD /* HomePresenter.swift */,
 				522FC2BE2A9BC1B000302A67 /* ConvertPresenter.swift */,
 				525833C42A9DDE0800B0CCCD /* ComparePresenter.swift */,
 				525833C82A9DE40300B0CCCD /* FavoritesPresenter.swift */,
@@ -265,7 +265,7 @@
 		5255A5C62A9A2D2500B30D8A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				522FC2BC2A9BBA4C00302A67 /* HomeScreenExtention.swift */,
+				525833CE2A9DFCE000B0CCCD /* HomeScreenExtention.swift */,
 				522FC2C02A9BCA7300302A67 /* ConvertScreenExtention.swift */,
 				522FC2C22A9BCCDD00302A67 /* CompareScreenExtention.swift */,
 				525833C62A9DE1FD00B0CCCD /* FavoritesExtention.swift */,
@@ -554,18 +554,18 @@
 				522FC2CC2A9D08C000302A67 /* MyFavoritesCell.swift in Sources */,
 				527ACE0F2A9B3A6600FC6D84 /* Currency.swift in Sources */,
 				5255A5792A9A2A9B00B30D8A /* HomeVC.swift in Sources */,
-				522FC2BB2A9BBA4000302A67 /* HomePresenter.swift in Sources */,
 				522FC2C12A9BCA7300302A67 /* ConvertScreenExtention.swift in Sources */,
 				527ACE0E2A9B3A6600FC6D84 /* Data.swift in Sources */,
+				525833CD2A9DFC9500B0CCCD /* HomePresenter.swift in Sources */,
 				525833C52A9DDE0800B0CCCD /* ComparePresenter.swift in Sources */,
 				525833C92A9DE40300B0CCCD /* FavoritesPresenter.swift in Sources */,
 				52575E902A9B25E60083FB1A /* UserDefaultManager.swift in Sources */,
 				522FC2BF2A9BC1B000302A67 /* ConvertPresenter.swift in Sources */,
 				5255A5752A9A2A9B00B30D8A /* AppDelegate.swift in Sources */,
+				525833CF2A9DFCE000B0CCCD /* HomeScreenExtention.swift in Sources */,
 				52C0BBF02A9B55A200619611 /* Constants.swift in Sources */,
 				522FC2C82A9BD14A00302A67 /* Protocols.swift in Sources */,
 				527ACE0B2A9B3A3400FC6D84 /* NetworkModel.swift in Sources */,
-				522FC2BD2A9BBA4C00302A67 /* HomeScreenExtention.swift in Sources */,
 				522FC2C32A9BCCDD00302A67 /* CompareScreenExtention.swift in Sources */,
 				5255A5CC2A9A2DA100B30D8A /* FavouritesVC.swift in Sources */,
 			);
