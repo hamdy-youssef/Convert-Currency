@@ -18,3 +18,12 @@ struct URLs {
 struct Networking {
     static let noData = "faild"
 }
+
+struct AlertConstants {
+    static let errorTitle = "Sorry"
+    static let actionTitle = "Ok"
+}
+
+//struct ErrorMessages {
+//static let somethingWentWrong = "Something went wrong, please try again later!"
+//}

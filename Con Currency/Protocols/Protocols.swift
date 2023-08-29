@@ -6,13 +6,20 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HomeVCProtocoL: AnyObject {
     func showConvertScreen()
     func showCompareScreen()
 }
 
-protocol ConvertAndCompareVCProtocoL: AnyObject {
+protocol ConvertVCProtocoL: AnyObject {
     func GoToCurrencyScreen()
     func GoToFavoritesScreen()
+    func fetchApiForConvert()
+    func showAlert(title: String, messege: String)
+}
+
+protocol CompareVCProtocoL: AnyObject {
+    func GoToCurrencyScreen()
 }

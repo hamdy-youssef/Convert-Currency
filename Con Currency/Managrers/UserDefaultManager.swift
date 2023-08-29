@@ -16,7 +16,7 @@ class UserDefaultsManager {
     
     private init() {}
     
-    func saveCurrencyData(currency: Currency) {
+    func saveCurrencyData(currency: [String]) {
         let encoder = JSONEncoder ()
         if let encodedCurrency = try? encoder.encode (currency) {
             let def = UserDefaults.standard
@@ -24,11 +24,11 @@ class UserDefaultsManager {
         }
     }
     
-    func loadCurrencyData() -> Currency? {
+    func loadCurrencyData() -> [String]? {
         let def = UserDefaults.standard
         if let savedCurrency = def.object(forKey: "currency") as? Data {
             let decoder = JSONDecoder ( )
-            if let loadedCurrency = try? decoder.decode (Currency.self, from: savedCurrency) {
+            if let loadedCurrency = try? decoder.decode ([String].self, from: savedCurrency) {
                 return loadedCurrency
             }
         }

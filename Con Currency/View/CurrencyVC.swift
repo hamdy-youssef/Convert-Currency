@@ -55,13 +55,11 @@ class CurrencyVC: UIViewController {
                     
                     cell.isSelected = true
                     cell.backView.backgroundColor = UIColor(red: 210, green: 213, blue: 224, alpha: 100)
-                    self.dismiss(animated: true, completion: nil)
-                    guard let name = cell.currencylabel.text else {
-                        return
-                    }
-                    convert.convertFromBTn.setTitle(name, for: .normal)
-                    print(name)
+                    let data = cell.currencylabel.text
+                    let image = cell.currencyImage.image
+                    NotificationCenter.default.post(name: Notification.Name("DataUpdated"), object: nil, userInfo: ["data": data, "image": image])
                     print("Selected cell at indexPath: \(indexPath)")
+                    self.dismiss(animated: true, completion: nil)
                 }
             })
             .disposed(by: disposeBag)

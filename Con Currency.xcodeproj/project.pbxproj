@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		522FC2BB2A9BBA4000302A67 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2BA2A9BBA4000302A67 /* HomePresenter.swift */; };
 		522FC2BD2A9BBA4C00302A67 /* HomeScreenExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2BC2A9BBA4C00302A67 /* HomeScreenExtention.swift */; };
-		522FC2BF2A9BC1B000302A67 /* ConvertAndComparePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2BE2A9BC1B000302A67 /* ConvertAndComparePresenter.swift */; };
+		522FC2BF2A9BC1B000302A67 /* ConvertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2BE2A9BC1B000302A67 /* ConvertPresenter.swift */; };
 		522FC2C12A9BCA7300302A67 /* ConvertScreenExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2C02A9BCA7300302A67 /* ConvertScreenExtention.swift */; };
 		522FC2C32A9BCCDD00302A67 /* CompareScreenExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2C22A9BCCDD00302A67 /* CompareScreenExtention.swift */; };
 		522FC2C82A9BD14A00302A67 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2C72A9BD14A00302A67 /* Protocols.swift */; };
+		522FC2CA2A9CE4E100302A67 /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2C92A9CE4E100302A67 /* ValidationManager.swift */; };
+		522FC2CC2A9D08C000302A67 /* MyFavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522FC2CB2A9D08C000302A67 /* MyFavoritesCell.swift */; };
 		5255A5752A9A2A9B00B30D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255A5742A9A2A9B00B30D8A /* AppDelegate.swift */; };
 		5255A5792A9A2A9B00B30D8A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255A5782A9A2A9B00B30D8A /* HomeVC.swift */; };
 		5255A57E2A9A2A9D00B30D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5255A57D2A9A2A9D00B30D8A /* Assets.xcassets */; };
@@ -60,10 +62,12 @@
 		4481FB8385CB586F98871227 /* Pods-Con CurrencyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Con CurrencyTests.release.xcconfig"; path = "Target Support Files/Pods-Con CurrencyTests/Pods-Con CurrencyTests.release.xcconfig"; sourceTree = "<group>"; };
 		522FC2BA2A9BBA4000302A67 /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePresenter.swift; path = "../../../../../Programing/Swift_projects/Convert-Currency/Con Currency/Presenters/HomePresenter.swift"; sourceTree = "<group>"; };
 		522FC2BC2A9BBA4C00302A67 /* HomeScreenExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeScreenExtention.swift; path = "../../../../../Programing/Swift_projects/Convert-Currency/Con Currency/Extension/HomeScreenExtention.swift"; sourceTree = "<group>"; };
-		522FC2BE2A9BC1B000302A67 /* ConvertAndComparePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertAndComparePresenter.swift; sourceTree = "<group>"; };
+		522FC2BE2A9BC1B000302A67 /* ConvertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertPresenter.swift; sourceTree = "<group>"; };
 		522FC2C02A9BCA7300302A67 /* ConvertScreenExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertScreenExtention.swift; sourceTree = "<group>"; };
 		522FC2C22A9BCCDD00302A67 /* CompareScreenExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareScreenExtention.swift; sourceTree = "<group>"; };
 		522FC2C72A9BD14A00302A67 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		522FC2C92A9CE4E100302A67 /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
+		522FC2CB2A9D08C000302A67 /* MyFavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoritesCell.swift; sourceTree = "<group>"; };
 		5255A5712A9A2A9B00B30D8A /* Con Currency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Con Currency.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5255A5742A9A2A9B00B30D8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5255A5782A9A2A9B00B30D8A /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -245,7 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				522FC2BA2A9BBA4000302A67 /* HomePresenter.swift */,
-				522FC2BE2A9BC1B000302A67 /* ConvertAndComparePresenter.swift */,
+				522FC2BE2A9BC1B000302A67 /* ConvertPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -265,6 +269,7 @@
 			children = (
 				5255A5D02A9A986E00B30D8A /* CurrencyTVCell.swift */,
 				5255A5D22A9AD16200B30D8A /* FavoritesTableViewCell.swift */,
+				522FC2CB2A9D08C000302A67 /* MyFavoritesCell.swift */,
 			);
 			path = "Table View Cell";
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				52575E8F2A9B25E60083FB1A /* UserDefaultManager.swift */,
+				522FC2C92A9CE4E100302A67 /* ValidationManager.swift */,
 			);
 			path = Managrers;
 			sourceTree = "<group>";
@@ -529,18 +535,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522FC2CA2A9CE4E100302A67 /* ValidationManager.swift in Sources */,
 				5255A5D32A9AD16200B30D8A /* FavoritesTableViewCell.swift in Sources */,
 				5255A5CE2A9A2DB300B30D8A /* CurrencyVC.swift in Sources */,
 				5255A5D12A9A986E00B30D8A /* CurrencyTVCell.swift in Sources */,
 				5255A5C82A9A2D7C00B30D8A /* ConvertVC.swift in Sources */,
 				5255A5CA2A9A2D8E00B30D8A /* CompareVC.swift in Sources */,
+				522FC2CC2A9D08C000302A67 /* MyFavoritesCell.swift in Sources */,
 				527ACE0F2A9B3A6600FC6D84 /* Currency.swift in Sources */,
 				5255A5792A9A2A9B00B30D8A /* HomeVC.swift in Sources */,
 				522FC2BB2A9BBA4000302A67 /* HomePresenter.swift in Sources */,
 				522FC2C12A9BCA7300302A67 /* ConvertScreenExtention.swift in Sources */,
 				527ACE0E2A9B3A6600FC6D84 /* Data.swift in Sources */,
 				52575E902A9B25E60083FB1A /* UserDefaultManager.swift in Sources */,
-				522FC2BF2A9BC1B000302A67 /* ConvertAndComparePresenter.swift in Sources */,
+				522FC2BF2A9BC1B000302A67 /* ConvertPresenter.swift in Sources */,
 				5255A5752A9A2A9B00B30D8A /* AppDelegate.swift in Sources */,
 				52C0BBF02A9B55A200619611 /* Constants.swift in Sources */,
 				522FC2C82A9BD14A00302A67 /* Protocols.swift in Sources */,

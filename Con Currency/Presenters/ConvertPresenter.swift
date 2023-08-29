@@ -8,9 +8,12 @@
 import Foundation
 import UIKit
 
-class ConvertAndComparePresenter {
-    weak var view: ConvertAndCompareVCProtocoL?
-    init (view: ConvertAndCompareVCProtocoL) {
+class ConvertPresenter {
+    
+    weak var view: ConvertVCProtocoL?
+    weak var screen: ConvertVC?
+    var amount: String?
+    init (view: ConvertVCProtocoL) {
         self.view = view
     }
     func goToAnyScreen(viewController: String) {
@@ -22,6 +25,14 @@ class ConvertAndComparePresenter {
             self.view?.GoToFavoritesScreen()
         default:
             break
+        }
+    }
+        
+    func checkAPI() {
+        if amount != nil {
+            self.view?.fetchApiForConvert()
+        }else {
+            self.view?.showAlert(title: "Wrong", messege: "Please Enter Amount")
         }
     }
     

@@ -8,17 +8,12 @@
 import Foundation
 import UIKit
 
-extension CompareVC: ConvertAndCompareVCProtocoL {
+extension CompareVC: CompareVCProtocoL {
     
-    func GoToCurrencyScreen(){
+    func GoToCurrencyScreen() {
         vc = sb.instantiateViewController(withIdentifier: "CurrencyVC") as! CurrencyVC
-        self.present(vc, animated: true)
+       self.present(vc, animated: true)
     }
-    
-    func GoToFavoritesScreen(){
-         return
-    }
-    
     func setBorderAndRadiusForUiComponents() {
         for button in Buttons {
             button.layer.borderWidth = 0.2
@@ -27,4 +22,10 @@ extension CompareVC: ConvertAndCompareVCProtocoL {
             button.layer.masksToBounds = true
         }
     }
+    func showAlert(title: String, messege: String) {
+        let alert = UIAlertController(title: title, message: messege, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true)
+    }
+
 }

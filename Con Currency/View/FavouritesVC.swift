@@ -17,15 +17,16 @@ class FavouritesVC: UIViewController {
     let disposeBag = DisposeBag()
     let cellSelectionSubject = PublishSubject<IndexPath>()
     let arrayOfCurrency  = Observable.just(Currency.setCurrenyData())
+    let convert: ConvertVC = ConvertVC()
+    var favCurrencyArray: [String] = ["EGP"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        favCurrencyArray = UserDefaultsManager.shared().loadCurrencyData() ?? ["EGP"]
         setTableData()
     }
     
-
+    
     func setTableData() {
         arrayOfCurrency
             .bind(to: favoritesTableView
@@ -35,6 +36,13 @@ class FavouritesVC: UIViewController {
                     cell.currencyImage.image = UIImage.init(named: currencyTableView.flag)
                     cell.currencylabel.text = currencyTableView.currency
                     cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: cell.bounds.size.width)
+                    
+                    for name in self.favCurrencyArray {
+                            if name == cell.currencylabel.text {
+                                cell.checkBtn.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
+                            }
+                        }
+                    
                 }
                 .disposed(by: disposeBag)
         
@@ -51,15 +59,35 @@ class FavouritesVC: UIViewController {
                     // Cell Selected
                     
                     cell.isSelected = true
-                    cell.checkBtn.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
+                    if cell.checkBtn.currentImage == UIImage(systemName: "checkmark.circle"){
+                        cell.checkBtn.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
+
+                            self.favCurrencyArray.append(cell.currencylabel.text!)
+                            UserDefaultsManager.shared().saveCurrencyData(currency: self.favCurrencyArray)
+                            print(self.favCurrencyArray)
+
+                    }
+                    else {
+                            cell.checkBtn.setImage(UIImage(systemName: "checkmark.circle"), for: .normal)
+                            let removeElement = cell.currencylabel.text
+                            self.favCurrencyArray.removeAll{$0 == removeElement}
+                            UserDefaultsManager.shared().saveCurrencyData(currency:  self.favCurrencyArray)
+                            print(self.favCurrencyArray)
+                    }
+                  
                     print("Selected cell at indexPath: \(indexPath)")
+                    print(self.favCurrencyArray)
                 }
             })
             .disposed(by: disposeBag)
     }
 
     @IBAction func closeFavoritesListBtn(_ sender: Any) {
+//        convert.fetchData()
         dismiss(animated: true, completion: nil)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+//        convert.fetchData()
+    }
 }

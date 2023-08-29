@@ -20,6 +20,11 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showConvertScreen()
+        let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
+                statusBarView.backgroundColor = UIColor.white // Change this to your desired color
+                
+                // Add the custom status bar view to the view controller's view hierarchy
+                view.addSubview(statusBarView)
     }
 
     @IBAction func segmentedAction(_ sender: UISegmentedControl) {

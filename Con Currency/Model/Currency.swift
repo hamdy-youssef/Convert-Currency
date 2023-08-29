@@ -8,14 +8,20 @@
 import Foundation
 import RxSwift
 
+
+
+
+
+
 struct Instruction: Codable {
     let baseCurrency: String
-    let favourites: [Currency]
-    
-    enum CodingKeys: String, CodingKey {
-        case baseCurrency = "base_currency"
-        case favourites
-    }
+    let targets: [FavCurrencyRate]
+}
+
+// MARK: - Target
+struct FavCurrencyRate: Codable {
+    let currency, exchangeRate: String
+    let flag: String
 }
 
 struct Currency: Codable {
@@ -39,8 +45,8 @@ struct Currency: Codable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case currency
-        case exchangeRate = "exchange_rate"
-        case flag
+        case currency = "currency"
+        case exchangeRate = "exchangeRate"
+        case flag = "flag"
     }
 }
