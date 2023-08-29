@@ -30,7 +30,7 @@ extension ConvertVC: ConvertVCProtocoL , UITextFieldDelegate{
     func fetcFavoritesCurrencyhData(){
         var myFav: [FavCurrencyRate] = []
         var myCurrency = UserDefaultsManager.shared().loadCurrencyData() ?? ["EGP"]
-        NetworkModel.getFavouriteCurrency(tail: "/rates", base: "USD", currenciesName: myCurrency) { error, json in
+        NetworkModel.getFavouriteCurrency(tail: "/rates", base: convertFromBTn.currentTitle!, currenciesName: myCurrency) { error, json in
             if let json = json {
                 myFav = json
                 DispatchQueue.main.async {
@@ -91,12 +91,6 @@ extension ConvertVC: ConvertVCProtocoL , UITextFieldDelegate{
         }
         favotiteBtn.layer.borderWidth = 0.7
     }
-    
-//    func showAlert(title: String, messege: String) {
-//        let alert = UIAlertController(title: title, message: messege, preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "OK", style: .default))
-//        self.present(alert, animated: true)
-//    }
     
      func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if baseAmountTextField.text != "" {

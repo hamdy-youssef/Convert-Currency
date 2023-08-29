@@ -59,6 +59,8 @@ class ConvertVC: UIViewController {
     
     @IBAction func convertButton(_ sender: Any) {
         presenter.amount = baseAmountTextField.text
+        favoritesTableView.delegate = nil
+        favoritesTableView.dataSource = nil
         presenter.checkAPI()
     }
  

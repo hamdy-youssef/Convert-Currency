@@ -17,6 +17,7 @@ protocol ConvertVCProtocoL: AnyObject, UIViewController{
     func GoToCurrencyScreen()
     func GoToFavoritesScreen()
     func fetchApiForConvert()
+    func fetcFavoritesCurrencyhData()
 //    func showAlert(title: String, messege: String)
 }
 

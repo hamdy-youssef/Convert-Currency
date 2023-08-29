@@ -21,7 +21,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         showConvertScreen()
         let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
-                statusBarView.backgroundColor = UIColor.white
+        statusBarView.backgroundColor = UIColor(named: "backgroundColor")
                 view.addSubview(statusBarView)
     }
 

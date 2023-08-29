@@ -41,6 +41,7 @@ class ConvertPresenter {
     
     func checkAPI() {
         if amount != "" && !IsNumberWrittenInArabicOrEnglish(amount!) {
+            self.view?.fetcFavoritesCurrencyhData()
             self.view?.fetchApiForConvert()
         }else {
             self.view?.showAlert(title: "Wrong", message: "Please Enter Amount")
