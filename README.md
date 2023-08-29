@@ -1,11 +1,13 @@
 # Convert-Currency
 
-The Currency Converter App is a user-friendly iOS application that allows users to easily convert between different currencies, view exchange rates, mark favorite currencies, and perform currency comparisons. This README file provides an overview of the project, its features, and how to set it up.
+
+The Currency Converter App is a user-friendly iOS application that allows users to easily convert between different currencies, view exchange rates, mark favorite currencies, and perform currency comparisons. This README file provides an overview of the project, its features, and how to set it up, including its dark mode functionality.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Dark Mode](#dark-mode)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -30,6 +32,10 @@ The Currency Converter App aims to provide iOS users with a seamless experience 
 6. Manage Favorites: Users can view and manage their list of favorite currencies, including adding and removing favorites.
 
 7. Side-by-Side Comparison: Users can compare multiple currencies side by side for easy analysis.
+
+## Dark Mode
+
+The Currency Converter App also includes a dark mode feature, providing users with the option to switch to a darker color scheme for enhanced visibility in low-light environments. The app's user interface elements and backgrounds will adapt to the dark mode, offering a comfortable experience during both day and night.
 
 ## Getting Started
 
@@ -79,4 +85,4 @@ The Currency Converter App is released under the [MIT License](LICENSE).
 
 ---
 
-Feel free to contact us at hamdyyoussef962@gmail.com for any questions or assistance. We hope you enjoy using the Currency Converter App!
+Feel free to contact us at hamdyyoussef962@gmail.com for any questions or assistance. We hope you enjoy using the Currency Converter App, including its dark mode functionality!
