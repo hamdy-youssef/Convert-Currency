@@ -29,11 +29,10 @@ class ConvertPresenter {
     }
         
     func checkAPI() {
-        if amount != nil {
+        if amount != "" {
             self.view?.fetchApiForConvert()
         }else {
             self.view?.showAlert(title: "Wrong", messege: "Please Enter Amount")
         }
     }
-    
 }

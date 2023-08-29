@@ -21,7 +21,7 @@ class CompareVC: UIViewController {
     @IBOutlet var targetTwoImage: UIImageView!
     @IBOutlet var fromImage: UIImageView!
     var tag: Int?
-//    lazy var presenter: ComparePresenter = ComparePresenter (view: self)
+    lazy var presenter: ComparePresenter = ComparePresenter (view: self)
     var vc: UIViewController!
     let sb = UIStoryboard(name: "Main", bundle: nil)
     
@@ -53,32 +53,13 @@ class CompareVC: UIViewController {
     }
     
     @IBAction func compareButtons(_ sender: UIButton) {
+        tag = sender.tag
         GoToCurrencyScreen()
     }
     
     @IBAction func combareBtn(_ sender: Any) {
-        if amountTextField.text != "" {
-            let tail = "/compare/\(fromBtn.currentTitle!)/\(targetOneBtn.currentTitle!)/\(targetTwoBtn.currentTitle!)/\(amountTextField.text!)"
-            NetworkModel.getDataForCompare(tail: tail) { error, valueOne, valueTwo in
-                if let error = error {
-                    print(error.localizedDescription)
-                }else {
-                    let firstValue = String(valueOne!.prefix(6))
-                    let secondValue = String(valueTwo!.prefix(6))
-                    DispatchQueue.main.async {
-                        [weak self] in
-                        guard let self = self else {return}
-                        self.targetOneLabel.text = firstValue
-                        self.targetTwoLabel.text = secondValue
-                    }
-                    
-                }
-                
-            }
-        }else{
-            showAlert(title: "Wrong", messege: "Please Enter The Amount ")
-            
-        }
+        presenter.amount = amountTextField.text
+        presenter.checkAPI()
     }
     
 }

@@ -22,4 +22,11 @@ protocol ConvertVCProtocoL: AnyObject {
 
 protocol CompareVCProtocoL: AnyObject {
     func GoToCurrencyScreen()
+    func fetchApiForCompare()
+    func showAlert(title: String, messege: String)
+}
+
+protocol FavoritesVCProtocoL: AnyObject {
+    func saveFavorite(cell: FavoritesTableViewCell)
+    func removeFavrite(cell: FavoritesTableViewCell)
 }

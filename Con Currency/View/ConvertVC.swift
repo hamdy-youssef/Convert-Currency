@@ -37,10 +37,8 @@ class ConvertVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setTableData()
-//        fetchData()
         setBorderAndRadiusForUiComponents()
-        convertFromBTn.setTitle("USD", for: .normal)
+        baseAmountTextField.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(handleDataUpdate(_:)), name: Notification.Name("DataUpdated"), object: nil)
         
     }
@@ -71,40 +69,9 @@ class ConvertVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         favoritesTableView.delegate = nil
         favoritesTableView.dataSource = nil
-        fetchData()
+        fetcFavoritesCurrencyhData()
     }
    
-    func fetchData(){
-        var myFav: [FavCurrencyRate] = []
-        var myCurrency = UserDefaultsManager.shared().loadCurrencyData()!
-        NetworkModel.getFavouriteCurrency(tail: "/rates", base: "USD", currenciesName: myCurrency) { error, json in
-            if let json = json {
-                print("hamdy2")
-                myFav = json
-                DispatchQueue.main.async {
-                    [weak self] in
-                    guard let self = self else {return}
-                    let myCellData = Observable.just(myFav)
-                    print(myFav)
-                   myCellData
-                       .bind(to: self.favoritesTableView
-                           .rx
-                           .items(cellIdentifier: "favCell", cellType: MyFavoritesCell.self)) {
-                               (rw, currencyTableView, cell) in
-                               cell.CurrencyName.text = myFav[rw].currency
-                               print(cell.CurrencyName.text)
-                               cell.currencyRate.text = myFav[rw].exchangeRate
-                               cell.currencyImage.sd_setImage(with: URL(string: (myFav[rw].flag as? String)!))
-                           }
-                           .disposed(by: self.disposeBag)
-                }
-                 
-            }
-        }
-
-    }
-    
-
     @IBAction func addToFavoriteBtn(_ sender: Any) {
         presenter.goToAnyScreen(viewController: "favorite")
     }
@@ -112,5 +79,7 @@ class ConvertVC: UIViewController {
         presenter.amount = baseAmountTextField.text
         presenter.checkAPI()
     }
+    
+    
 }
 

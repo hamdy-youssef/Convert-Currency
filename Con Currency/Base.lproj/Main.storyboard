@@ -251,7 +251,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="USD">
+                                        <buttonConfiguration key="configuration" style="plain" title="EGP">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
@@ -323,7 +323,7 @@
                                         <rect key="frame" x="170" y="52" width="49" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="USD" translatesAutoresizingMaskIntoConstraints="NO" id="Ppz-x5-8np">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EGP" translatesAutoresizingMaskIntoConstraints="NO" id="Ppz-x5-8np">
                                         <rect key="frame" x="29" y="157" width="49" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="7dU-FF-tMl"/>
@@ -388,7 +388,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIt-KD-9I9">
-                                                    <rect key="frame" x="52" y="0.0" width="35" height="24"/>
+                                                    <rect key="frame" x="52" y="5" width="35" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="9KN-Rd-1FY"/>
                                                         <constraint firstAttribute="height" constant="24" id="rfm-D7-W01"/>
@@ -425,7 +425,7 @@
                                                 <constraint firstItem="7gZ-V4-WC6" firstAttribute="centerY" secondItem="lld-Fy-mhc" secondAttribute="centerY" id="Tc0-hR-hY3"/>
                                                 <constraint firstItem="7gZ-V4-WC6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LYS-9I-SAF" secondAttribute="trailing" constant="8" symbolic="YES" id="Vsb-eN-U3Q"/>
                                                 <constraint firstItem="C7h-FE-Td4" firstAttribute="top" secondItem="lld-Fy-mhc" secondAttribute="top" id="dIa-aO-CRO"/>
-                                                <constraint firstItem="KIt-KD-9I9" firstAttribute="top" secondItem="lld-Fy-mhc" secondAttribute="top" id="hMr-w3-NYJ"/>
+                                                <constraint firstItem="KIt-KD-9I9" firstAttribute="top" secondItem="lld-Fy-mhc" secondAttribute="top" constant="5" id="hMr-w3-NYJ"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LYS-9I-SAF" secondAttribute="trailing" constant="20" symbolic="YES" id="hPB-cg-3WR"/>
                                                 <constraint firstItem="C7h-FE-Td4" firstAttribute="leading" secondItem="lld-Fy-mhc" secondAttribute="leading" id="mPj-H0-3qP"/>
                                                 <constraint firstAttribute="trailing" secondItem="7gZ-V4-WC6" secondAttribute="trailing" id="qo5-md-ohu"/>
@@ -792,7 +792,7 @@
                                             <constraint firstAttribute="height" constant="48" id="Ydv-Si-0DQ"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="EGP">
+                                        <buttonConfiguration key="configuration" style="plain" title="USD">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
@@ -837,7 +837,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="USD">
+                                        <buttonConfiguration key="configuration" style="plain" title="EGP">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
@@ -847,7 +847,7 @@
                                             <action selector="compareButtons:" destination="6tn-dE-xDF" eventType="touchUpInside" id="6is-Ye-UU7"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="USD" translatesAutoresizingMaskIntoConstraints="NO" id="n3w-DM-FMD">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EGP" translatesAutoresizingMaskIntoConstraints="NO" id="n3w-DM-FMD">
                                         <rect key="frame" x="6" y="150" width="49" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="eBB-kY-DUP"/>
@@ -862,7 +862,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="GBP">
+                                        <buttonConfiguration key="configuration" style="plain" title="EUR">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
@@ -891,7 +891,7 @@
                                             <action selector="convertButton:" destination="dVh-HA-WGe" eventType="touchUpInside" id="gaa-1k-pCx"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXN-48-0OF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXN-48-0OF">
                                         <rect key="frame" x="177" y="210" width="153" height="48"/>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -901,7 +901,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qu0-20-TiB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qu0-20-TiB">
                                         <rect key="frame" x="0.0" y="210" width="152" height="47"/>
                                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -938,7 +938,7 @@
                                         </constraints>
                                         <imageReference key="image" image="chevron.down" catalog="system" variableValue="1"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="USD" translatesAutoresizingMaskIntoConstraints="NO" id="qsd-9v-Wqz">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EUR" translatesAutoresizingMaskIntoConstraints="NO" id="qsd-9v-Wqz">
                                         <rect key="frame" x="184" y="151" width="49" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="hbK-6O-1fD"/>
@@ -1030,6 +1030,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="EGP" width="512" height="512"/>
+        <image name="EUR" width="512" height="512"/>
         <image name="Rectangle 710" width="375" height="239"/>
         <image name="USD" width="512" height="512"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>

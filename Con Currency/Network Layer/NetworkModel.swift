@@ -6,46 +6,50 @@
 //
 
 import Foundation
+import UIKit
 
 class NetworkModel {
     //completion: @escaping (_ error: Error?, _ mediaArr: [Date]?) -> Void
     
-    
         static func getDataForConvert(tail: String, completion: @escaping (_ error: Error?, _ currencyData: String?) -> Void){
-            var baseUrl = URLs.currency
-            baseUrl = baseUrl + tail
-            let url = URL(string: baseUrl)!
-            let request = URLRequest(url: url)
-            let session = URLSession(configuration: URLSessionConfiguration.default)
-    
-            let task = session.dataTask(with: request) {data, session, error in
-                print(data!)
-    
-                guard error == nil else {
-                    print(error!)
-                    completion (error!, nil)
-                    return
-                }
-    
-                guard let data = data else {
-                    print(Networking.noData)
-                    return
-                }
-    
-                do{
-                    print(url)
-                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! Dictionary<String, String>
-                    var dataOfCurrency = CurrencyData()
-                    dataOfCurrency.conversionValue = json["conversionValue"] as! String
-                    let valueOfCurrencyAfterConvert: String = dataOfCurrency.conversionValue!
+            do{
+                var baseUrl = URLs.currency
+                baseUrl = baseUrl + tail
+                let url = URL(string: baseUrl)!
+                let request = URLRequest(url: url)
+                let session = URLSession(configuration: URLSessionConfiguration.default)
+        
+                let task = session.dataTask(with: request) {data, session, error in
+        
+                    guard error == nil else {
+                        print(error!)
+                        completion (error!, nil)
+                        return
+                    }
+        
+                    guard let data = data else {
+                        completion (error, nil)
+                        return
+                    }
                     
-                    completion (nil, valueOfCurrencyAfterConvert)
-    
-                }catch{
-                    print(error)
+                     do{
+                        print(url)
+                        let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! Dictionary<String, String>
+                        var dataOfCurrency = CurrencyData()
+                        dataOfCurrency.conversionValue = json["conversionValue"] as! String
+                        let valueOfCurrencyAfterConvert: String = dataOfCurrency.conversionValue!
+                        
+                        completion (nil, valueOfCurrencyAfterConvert)
+        
+                    }catch{
+                        completion (error, nil)
+                    }
                 }
+                task.resume()
+            }catch{
+                completion (error, nil)
             }
-            task.resume()
+            
         }
     
     static func getDataForCompare(tail: String, completion: @escaping (_ error: Error?, _ valueOne: String?, _ valueTwo: String?) -> Void){

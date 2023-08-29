@@ -29,6 +29,9 @@
 		5255A5D12A9A986E00B30D8A /* CurrencyTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255A5D02A9A986E00B30D8A /* CurrencyTVCell.swift */; };
 		5255A5D32A9AD16200B30D8A /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255A5D22A9AD16200B30D8A /* FavoritesTableViewCell.swift */; };
 		52575E902A9B25E60083FB1A /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52575E8F2A9B25E60083FB1A /* UserDefaultManager.swift */; };
+		525833C52A9DDE0800B0CCCD /* ComparePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525833C42A9DDE0800B0CCCD /* ComparePresenter.swift */; };
+		525833C72A9DE1FD00B0CCCD /* FavoritesExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525833C62A9DE1FD00B0CCCD /* FavoritesExtention.swift */; };
+		525833C92A9DE40300B0CCCD /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525833C82A9DE40300B0CCCD /* FavoritesPresenter.swift */; };
 		527ACE0B2A9B3A3400FC6D84 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ACE0A2A9B3A3400FC6D84 /* NetworkModel.swift */; };
 		527ACE0E2A9B3A6600FC6D84 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ACE0C2A9B3A6600FC6D84 /* Data.swift */; };
 		527ACE0F2A9B3A6600FC6D84 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527ACE0D2A9B3A6600FC6D84 /* Currency.swift */; };
@@ -86,6 +89,9 @@
 		5255A5D02A9A986E00B30D8A /* CurrencyTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTVCell.swift; sourceTree = "<group>"; };
 		5255A5D22A9AD16200B30D8A /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		52575E8F2A9B25E60083FB1A /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		525833C42A9DDE0800B0CCCD /* ComparePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparePresenter.swift; sourceTree = "<group>"; };
+		525833C62A9DE1FD00B0CCCD /* FavoritesExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesExtention.swift; sourceTree = "<group>"; };
+		525833C82A9DE40300B0CCCD /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
 		527ACE0A2A9B3A3400FC6D84 /* NetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
 		527ACE0C2A9B3A6600FC6D84 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		527ACE0D2A9B3A6600FC6D84 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
@@ -250,6 +256,8 @@
 			children = (
 				522FC2BA2A9BBA4000302A67 /* HomePresenter.swift */,
 				522FC2BE2A9BC1B000302A67 /* ConvertPresenter.swift */,
+				525833C42A9DDE0800B0CCCD /* ComparePresenter.swift */,
+				525833C82A9DE40300B0CCCD /* FavoritesPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -260,6 +268,7 @@
 				522FC2BC2A9BBA4C00302A67 /* HomeScreenExtention.swift */,
 				522FC2C02A9BCA7300302A67 /* ConvertScreenExtention.swift */,
 				522FC2C22A9BCCDD00302A67 /* CompareScreenExtention.swift */,
+				525833C62A9DE1FD00B0CCCD /* FavoritesExtention.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -537,6 +546,7 @@
 			files = (
 				522FC2CA2A9CE4E100302A67 /* ValidationManager.swift in Sources */,
 				5255A5D32A9AD16200B30D8A /* FavoritesTableViewCell.swift in Sources */,
+				525833C72A9DE1FD00B0CCCD /* FavoritesExtention.swift in Sources */,
 				5255A5CE2A9A2DB300B30D8A /* CurrencyVC.swift in Sources */,
 				5255A5D12A9A986E00B30D8A /* CurrencyTVCell.swift in Sources */,
 				5255A5C82A9A2D7C00B30D8A /* ConvertVC.swift in Sources */,
@@ -547,6 +557,8 @@
 				522FC2BB2A9BBA4000302A67 /* HomePresenter.swift in Sources */,
 				522FC2C12A9BCA7300302A67 /* ConvertScreenExtention.swift in Sources */,
 				527ACE0E2A9B3A6600FC6D84 /* Data.swift in Sources */,
+				525833C52A9DDE0800B0CCCD /* ComparePresenter.swift in Sources */,
+				525833C92A9DE40300B0CCCD /* FavoritesPresenter.swift in Sources */,
 				52575E902A9B25E60083FB1A /* UserDefaultManager.swift in Sources */,
 				522FC2BF2A9BC1B000302A67 /* ConvertPresenter.swift in Sources */,
 				5255A5752A9A2A9B00B30D8A /* AppDelegate.swift in Sources */,
